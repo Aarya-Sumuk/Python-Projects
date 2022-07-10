@@ -8,5 +8,5 @@ while again.upper() == "Y":
     b = billing.purchase_items(a)
     update.overwrite(a, b)
     again = input("\nNew guests arrived? ")
-print("\nThank you for dining with us!!")
-print("\nFind your invoice by searching your name")
+print("\nThank you !!")
+print("\nFind your invoice by searching your name as a text file")
