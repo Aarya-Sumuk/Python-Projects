@@ -43,7 +43,7 @@ def purchase_items(List):
 
     print("\nYou Choosed Items and it's Quantity respectively:\n", q, "\n")
     
-    f_amount = 0  # final amount
+    f_amount = 0  
     for keys in q.keys():
         if keys == L[0][0].upper():  
             t_price = int(L[0][1])
@@ -66,11 +66,11 @@ def purchase_items(List):
     print("\nYour total amount is: ", f_amount)
 
 #Generating an invoice
-    import datetime  # import system date and time for create a unique invoive name.
+    import datetime  
     uniqueid = str(datetime.datetime.now().year) + "-" + str(datetime.datetime.now().month) + "-" + str(
         datetime.datetime.now().day) + "-" + str(datetime.datetime.now().hour) + "-" + str(
         datetime.datetime.now().minute) + "-" + str(datetime.datetime.now().second)
-    invoice = str(uniqueid)  # unique invoice
+    invoice = str(uniqueid)  
 
     file = open(invoice + " (" + cust_name + ").txt", "w")  
     file.write("=============================================================")
@@ -81,7 +81,7 @@ def purchase_items(List):
     file.write("\nPARTICULAR\tQUANTITY\tUNIT PRICE\tTOTAL")
     file.write("\n-------------------------------------------------------------")
 
-    for keys in q.keys():  # In this loop, write in a file only those product which is purchase by user.
+    for keys in q.keys(): 
         if keys == "TOMATO":
             file.write(
                 str("\n" + str(keys) + " \t\t " + str(q['TOMATO']) + " \t\t " + str(L[0][1]) + " \t\t " + str(t_amount)))
